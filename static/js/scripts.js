@@ -15,6 +15,10 @@ jQuery(function($) {
 
         $('html, body').animate({'scrollTop': 0});
     });
+
+	if ( $.hugo.Markup == "rst" ) {
+		$('pre.code').wrapInner( "<code></code>" );
+	}
 });
 
 hljs.initHighlightingOnLoad();
